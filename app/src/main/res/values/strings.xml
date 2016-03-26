@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IN\'Prog</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="evenements_courants">Evenements du jour ! </string>
+    <string name="recherche">recherche </string>
+    <string name="nom">Boudier Arnaud </string>
+    <string name="mail">aboudier@ensimag.grenoble-inp.fr </string>
+</resources>
