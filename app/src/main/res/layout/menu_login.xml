@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:layout_width="148dp"
+        android:layout_height="98dp"
+        android:id="@+id/imageView2"
+        android:src="@drawable/logoinprog"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.15"
+        android:layout_marginTop="20dp" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextAddressemail"
+        android:layout_gravity="center_horizontal"
+        android:hint="Adresse Email"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editTextPasseword"
+        android:layout_gravity="center_horizontal"
+        android:hint="Passeword"
+        android:textAlignment="center" />
+
+    <CheckBox
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:text="Rester Connecté ?"
+        android:id="@+id/checkConnecte"
+        android:textAlignment="center"
+        android:checked="false"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.12"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Mot de passse oublié ?"
+        android:id="@+id/Txtmdpoublie"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.15"
+        android:textSize="20dp"
+        android:linksClickable="true"
+        android:clickable="true"
+        android:contextClickable="false" />
+
+    <Button
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/btnlogin"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="142dp"
+        android:layout_height="wrap_content"
+        android:text="Inscription"
+        android:id="@+id/btninscription"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

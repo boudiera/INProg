@@ -1,24 +1,16 @@
 package com.example.arnaud.myapplication;
 
+import android.app.TabActivity;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TabHost;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends TabActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
@@ -28,25 +20,33 @@ public class MainActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        Resources res = getResources();
-        TabHost tabHost;
-        tabHost = new TabHost();
+        TabHost tabHost = getTabHost();
         TabHost.TabSpec spec;
         Intent intent;
-        intent = new Intent().setClass(this, Tab1.class);
+
+        intent = new Intent().setClass(this, OngletEvenements.class);
+
+        spec = tabHost
+                .newTabSpec("Evenements")
+                .setIndicator("Evenements du Jour !")
+                .setContent(intent);
+        tabHost.addTab(spec);
+
+        intent = new Intent().setClass(this, OngletRecherche.class);
+        spec = tabHost
+                .newTabSpec("Recherche")
+                .setIndicator("Recherche")
+                .setContent(intent);
+        tabHost.addTab(spec);
 
 
-        TextView texteView = (TextView) findViewById(R.id.btnEvCourants);
-        Typeface font = Typeface.createFromAsset(getAssets(), "font1.TTF");
-        texteView.setTypeface(font);
-
-        TextView texteView2 = (TextView) findViewById(R.id.btnRecherche);
-        Typeface font2 = Typeface.createFromAsset(getAssets(), "font1.TTF");
-        texteView2.setTypeface(font2);
-
+        tabHost.setCurrentTab(0);
+        tabHost.getTabWidget().setDividerDrawable(R.drawable.side_nav_bar);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        getLayoutInflater().inflate(R.layout.evenements,null);
     }
+
 
     @Override
     public void onBackPressed() {
@@ -72,16 +72,19 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_slideshow) {
+        if (id == R.id.mes_evenements) {
 
-        } else if (id == R.id.nav_manage) {
-
+        } else if (id == R.id.mon_compte) {
+            Intent intent_mon_compte = new Intent(this,MonCompteActivity.class);
+            startActivity(intent_mon_compte);
+        }
+        else if (id == R.id.nav_login){
+            Intent intent = new Intent(this,LoginActivity.class);
+            startActivity(intent);
 
         }
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        //DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 }

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MON COMPTE"
+        android:textSize="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textViewCompte"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Nom : "
+        android:textSize="20dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/textViewNom"
+        android:layout_below="@+id/textViewCompte"
+        android:layout_alignStart="@+id/textViewCompte"
+        android:layout_marginStart="28dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dupond"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textViewNom2"
+        android:textSize="20dp"
+        android:layout_above="@+id/textViewPrenom"
+        android:layout_toEndOf="@+id/textViewNom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jean"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textViewPrenom2"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewNom2"
+        android:layout_toEndOf="@+id/textViewPrenom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Prenom : "
+        android:textSize="20dp"
+        android:id="@+id/textViewPrenom"
+        android:layout_below="@+id/textViewNom"
+        android:layout_alignStart="@+id/textViewNom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Ecole : "
+        android:textSize="20dp"
+        android:id="@+id/textViewEcole"
+        android:layout_below="@+id/textViewPrenom2"
+        android:layout_alignStart="@+id/textViewPrenom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ensimag"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textViewEcole2"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewPrenom2"
+        android:layout_toEndOf="@+id/textViewEcole" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Adresse Email : "
+        android:textSize="20dp"
+        android:id="@+id/textViewAdresseEmail"
+        android:layout_below="@+id/textViewEcole"
+        android:layout_alignStart="@+id/textViewEcole" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/editTextAdresseMail2"
+        android:text="jean.dupond@ensimag.grenoble-inp.fr"
+        android:layout_below="@+id/textViewAdresseEmail"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Mot de passe : "
+        android:textSize="20dp"
+        android:id="@+id/textViewMotdepasse"
+        android:layout_below="@+id/editTextAdresseMail2"
+        android:layout_alignStart="@+id/textViewAdresseEmail" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:text="mdpdepasse"
+        android:textAlignment="center"
+        android:id="@+id/editTextMdp2"
+        android:layout_below="@+id/textViewMotdepasse"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2506543"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/textViewCVA2"
+        android:textSize="20dp"
+        android:layout_below="@+id/editTextMdp2"
+        android:layout_alignStart="@+id/textViewEcole2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="CVA : "
+        android:textSize="20dp"
+        android:id="@+id/textViewCva"
+        android:layout_below="@+id/editTextMdp2"
+        android:layout_toStartOf="@+id/textViewEcole2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Annuler"
+        android:id="@+id/btnannuler"
+        android:layout_below="@+id/btnsauvegarder"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sauvegarder"
+        android:id="@+id/btnsauvegarder"
+        android:layout_below="@+id/textViewCVA2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp" />
+
+
+</RelativeLayout>
